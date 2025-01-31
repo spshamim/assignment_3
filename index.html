@@ -31,8 +31,25 @@
                 },
                 backgroundImage: {
                     'ever-right': "linear-gradient(to bottom right, #FFF9F4, #F9DF8A)",
-                    'carousel-bg': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("asset/caro.jpg")',
+                    'carousel-bg-1': 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("asset/caro_1.jpg")',
+                    'carousel-bg-2': 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("asset/caro_2.jpg")',
+                    'carousel-bg-3': 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("asset/caro_3.jpg")',
                 },
+                keyframes: {
+                    bounce: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-10px)' },
+                    },
+                    floating: {
+                        '0%': { transform: 'translateY(0px)' },
+                        '50%': { transform: 'translateY(-45px)' },
+                        '100%': { transform: 'translateY(0px)' },
+                    },
+                },
+                animation: {
+                    'bounce': 'bounce 0.9s ease-in-out infinite',
+                    'floating': 'floating 2.3s ease-in-out infinite',
+                }
             }
         }
         }
@@ -51,16 +68,21 @@
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1 hidden sm:inline-flex">
-                <li><a class="text-xl">Find a pet</a></li>
-                <li><a class="text-xl">Breeds</a></li>
-                <li><a class="text-xl">Contact Us</a></li>
+                <li><a class="text-sm sm:text-lg hover:font-semibold">Find a pet</a></li>
+                <li><a class="text-sm sm:text-lg hover:font-semibold">Breeds</a></li>
+                <li><a class="text-sm sm:text-lg hover:font-semibold">Contact Us</a></li>
               </ul>
             </div>
             <div class="navbar-end">
-                <i class="fa-regular fa-bell hidden sm:block"></i>
-                <i class="fa-solid fa-magnifying-glass ml-4 hidden sm:block"></i>
-                <a class="btn ml-4 bg-transparent border-1 border-[rgb(255,220,38)] text-xl hidden sm:inline-flex">Login</a>
-                <a class="btn ml-3 text-xl bg-[#FFDC26] hidden sm:inline-flex border-none">Register</a>
+                <i class="fa-regular fa-bell hidden sm:block hover:rounded-lg cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i>
+                <i class="fa-solid fa-magnifying-glass ml-4 hidden sm:block hover:rounded-lg cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i>
+                <a class="btn ml-4 bg-transparent border-1 border-[rgb(255,220,38)] text-sm sm:text-lg hidden sm:inline-flex hover:bg-gradient-to-br hover:from-[#FFF9F4] hover:to-[#F9DF8A] 
+                hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out">Login</a>
+                <a class="btn ml-3 text-sm sm:text-lg bg-[#FFDC26] hidden sm:inline-flex border-none 
+                        hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] 
+                        hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out">
+                    Register
+                </a>
                 <i class="fa-solid fa-bars block sm:hidden"></i>
             </div>
         </div>
@@ -71,10 +93,11 @@
                 <div class="relative z-20">
                     <h2 class="text-3xl lg:text-5xl mb-3 lg:mb-4 font-adlam">Pamper Your Pet,<br>Because They Deserve<br>the Best</h2>
                     <p class="text-sm lg:text-xl mb-3 lg:mb-4 lg:w-3/6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                    <a class="btn text-sm lg:text-xl bg-[#FFDC26] border-none">Find a pet</a>
+                    <a class="btn text-sm lg:text-xl bg-[#FFDC26] border-none hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] 
+                    hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out animate-bounce">Find a pet</a>
                 </div>
                 <div>
-                    <img src="asset/cat-big-bg.png" alt="" class="w-full absolute bottom-0 right-0 z-10">
+                    <img src="asset/cat-big-bg.png" alt="" class="w-full absolute bottom-0 right-0 z-10 animate-floating">
                 </div>
             </div>
         </div>
@@ -144,7 +167,8 @@
                         <div>
                             <h4 class="font-bold text-2xl lg:text-3xl mb-4">T-Shirt For Dogs</h4>
                             <p class="text-sm mb-4 w-4/6">Discover a world of treats, toys, and essential handpicked for.</p>
-                            <a class="btn bg-white text-sm">Shop Now</a>
+                            <a class="btn bg-white text-sm hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] 
+                            hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out">Shop Now</a>
                         </div>
                         <div class="relative h-48">
                             <img src="asset/cute-pet-small.png" alt="" class="absolute bottom-0 -right-10 sm:-right-6">
@@ -339,11 +363,11 @@
             <!-- Slider/Carousel -->
             <div class="carousel w-full lg:h-[500px] text-white">
                 <!-- Slide 1 -->
-                <div id="slide1" class="carousel-item relative w-full bg-carousel-bg bg-cover bg-center bg-no-repeat rounded-lg">
+                <div id="slide1" class="carousel-item relative w-full bg-carousel-bg-1 bg-cover bg-center bg-no-repeat rounded-lg">
                     <div class="flex flex-col lg:flex-row p-12 lg:p-24">
                         <div class="flex flex-col justify-center items-center space-y-7 flex-1">
                         <div class="avatar">
-                            <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                            <div class="ring-[#FFDC26] ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
                             <img src="asset/avatar.png" />
                             </div>
                         </div>
@@ -359,18 +383,18 @@
                     <div
                         class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
                     >
-                        <a href="#slide3" class="btn btn-circle bg-black border-none text-white">❮</a>
-                        <a href="#slide2" class="btn btn-circle bg-black border-none text-white">❯</a>
+                        <a href="#slide3" class="btn btn-circle bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] border-none text-black hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] hover:scale-105 transition-transform duration-300 ease-in-out">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] border-none text-black hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] hover:scale-105 transition-transform duration-300 ease-in-out">❯</a>
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
-                <div id="slide2" class="carousel-item relative w-full bg-carousel-bg bg-cover bg-center bg-no-repeat rounded-lg">
+                <div id="slide2" class="carousel-item relative w-full bg-carousel-bg-2 bg-cover bg-center bg-no-repeat rounded-lg">
                     <div class="flex flex-col lg:flex-row p-12 lg:p-24">
                         <!-- text content -->
                         <div class="flex flex-col justify-center items-center space-y-7 flex-1">
                         <div class="avatar">
-                            <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                            <div class="ring-[#FFDC26] ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
                             <img src="asset/avatar.png" />
                             </div>
                         </div>
@@ -386,16 +410,16 @@
                     <div
                         class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
                     >
-                        <a href="#slide1" class="btn btn-circle bg-black border-none text-white">❮</a>
-                        <a href="#slide3" class="btn btn-circle bg-black border-none text-white">❯</a>
+                        <a href="#slide1" class="btn btn-circle bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] border-none text-black hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] hover:scale-105 transition-transform duration-300 ease-in-out">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] border-none text-black hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] hover:scale-105 transition-transform duration-300 ease-in-out">❯</a>
                     </div>
                 </div>
                 <!-- Slide 3 -->
-                <div id="slide3" class="carousel-item relative w-full bg-carousel-bg bg-cover bg-center bg-no-repeat rounded-lg">
+                <div id="slide3" class="carousel-item relative w-full bg-carousel-bg-3 bg-cover bg-center bg-no-repeat rounded-lg">
                     <div class="flex flex-col lg:flex-row p-12 lg:p-24">
                         <div class="flex flex-col justify-center items-center space-y-7 flex-1">
                         <div class="avatar">
-                            <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                            <div class="ring-[#FFDC26] ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
                             <img src="asset/avatar.png" />
                             </div>
                         </div>
@@ -411,8 +435,8 @@
                     <div
                         class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
                     >
-                        <a href="#slide2" class="btn btn-circle bg-black border-none text-white">❮</a>
-                        <a href="#slide1" class="btn btn-circle bg-black border-none text-white">❯</a>
+                        <a href="#slide2" class="btn btn-circle bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] border-none text-black hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] hover:scale-105 transition-transform duration-300 ease-in-out">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] border-none text-black hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] hover:scale-105 transition-transform duration-300 ease-in-out">❯</a>
                     </div>
                 </div>
             </div>
@@ -429,8 +453,9 @@
                     <h2 class="text-2xl sm:text-4xl font-adlam font-bold mb-5 text-center sm:text-left">Get Pawsome News!</h2>
                     <p class="text-sm sm:text-lg mb-8 text-center sm:text-left">Exclusive training tips, ticks, product deals and more.</p>
                     <div class="flex flex-col justify-center items-center sm:items-start">
-                        <input type="text" placeholder="Email address" class="input text-sm sm:text-lg w-full sm:w-[80%] mb-8" />
-                        <a class="btn text-xs sm:text-lg bg-[#FFDC26] border-none w-[70%] sm:w-[33%]">Subscribe</a>
+                        <input type="text" placeholder="Email address" class="input focus:outline-none text-sm sm:text-lg w-full sm:w-[80%] mb-8" />
+                        <a class="btn text-xs sm:text-lg bg-[#FFDC26] border-none w-[70%] sm:w-[33%] hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] 
+                        hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out">Subscribe</a>
                     </div>
                 </div>
             </div>
@@ -446,7 +471,7 @@
                             <div>
                                 <img src="asset/logo-footer.png" alt="">
                             </div>
-                            <h3 class="text-2xl ml-3">Browse<span class="text-[#FFDC26]">4</span>Pets</h3>
+                            <h3 class="text-2xl ml-3 font-semibold">Browse<span class="text-[#FFDC26]">4</span>Pets</h3>
                         </div>
                         <p class="text-sm text-[rgba(1,1,1,0.7)]">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
                     </div>
@@ -454,9 +479,9 @@
                     <!-- Middle -->
                     <div>
                         <ul class="flex flex-col justify-center gap-3">
-                            <li><a class="text-sm sm:text-lg">Find a pet</a></li>
-                            <li><a class="text-sm sm:text-lg">Breeds</a></li>
-                            <li><a class="text-sm sm:text-lg">Contact Us</a></li>
+                            <li><a class="text-sm sm:text-lg font-semibold hover:text-[#315ac2] cursor-pointer">Find a pet</a></li>
+                            <li><a class="text-sm sm:text-lg font-semibold hover:text-[#315ac2] cursor-pointer">Breeds</a></li>
+                            <li><a class="text-sm sm:text-lg font-semibold hover:text-[#315ac2] cursor-pointer">Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -464,10 +489,10 @@
                     <div class="flex flex-col justify-center items-start">
                         <h3 class="text-sm sm:text-lg mb-3 font-semibold">Follow us</h3>
                         <div class="flex gap-10">
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-youtube"></i>
+                            <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook-f cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
+                            <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
+                            <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
+                            <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
                         </div>
                     </div>
                 </div>
