@@ -36,10 +36,6 @@
                     'carousel-bg-3': 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("asset/caro_3.jpg")',
                 },
                 keyframes: {
-                    bounce: {
-                        '0%, 100%': { transform: 'translateY(0)' },
-                        '50%': { transform: 'translateY(-10px)' },
-                    },
                     floating: {
                         '0%': { transform: 'translateY(0px)' },
                         '50%': { transform: 'translateY(-45px)' },
@@ -47,8 +43,7 @@
                     },
                 },
                 animation: {
-                    'bounce': 'bounce 0.9s ease-in-out infinite',
-                    'floating': 'floating 2.3s ease-in-out infinite',
+                    'floating': 'floating 2.3s ease-in-out infinite'
                 }
             }
         }
@@ -59,7 +54,7 @@
     <!-- Header -->
     <header>
         <!-- Navbar -->
-        <div class="navbar bg-[#FFF9F4] px-3 lg:px-28 border-b-2 border-black sm:border-none relative z-20">
+        <div class="navbar bg-[#FFF9F4] px-3 lg:px-28 border-b-[1.6px] border-black sm:border-none relative z-20">
             <div class="navbar-start">
                 <div>
                     <img src="asset/logo-header.png" alt="">
@@ -94,7 +89,7 @@
                     <h2 class="text-3xl lg:text-5xl mb-3 lg:mb-4 font-adlam">Pamper Your Pet,<br>Because They Deserve<br>the Best</h2>
                     <p class="text-sm lg:text-xl mb-3 lg:mb-4 lg:w-3/6">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
                     <a class="btn text-sm lg:text-xl bg-[#FFDC26] border-none hover:bg-gradient-to-br hover:from-[#F8CCFB] hover:to-[#ACD2FD] 
-                    hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out animate-bounce">Find a pet</a>
+                    hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out">Find a pet</a>
                 </div>
                 <div>
                     <img src="asset/cat-big-bg.png" alt="" class="w-full absolute bottom-0 right-0 z-10 animate-floating">
@@ -171,7 +166,7 @@
                             hover:text-black hover:scale-105 transition-transform duration-300 ease-in-out">Shop Now</a>
                         </div>
                         <div class="relative h-48">
-                            <img src="asset/cute-pet-small.png" alt="" class="absolute bottom-0 -right-10 sm:-right-6">
+                            <img src="asset/cute-pet-small.png" alt="" class="absolute bottom-0 -right-4 sm:-right-6">
                         </div>
                     </div>
     
@@ -350,7 +345,7 @@
                     </div>
 
                     <div class="relative h-60 sm:h-48">
-                        <img src="asset/cute-pet-mid.png" alt="" class="w-[65%] sm:w-[61%] absolute sm:-bottom-24 bottom-2 right-0 sm:right-4">
+                        <img src="asset/cute-pet-mid.png" alt="" class="w-[65%] sm:w-[61%] absolute sm:-bottom-24 bottom-2 right-4 sm:right-4">
                     </div>
                 </div>
             </div>
@@ -462,7 +457,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-[rgba(255,220,38,0.5)] absolute z-10 -bottom-[420px] sm:-bottom-64">
+        <section class="bg-[rgba(255,220,38,0.5)] absolute z-10 -bottom-[420px] sm:-bottom-64">
             <div class="px-3 lg:px-28 pt-96 sm:pt-48">
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-48 py-5 lg:py-20">
                     <!-- First -->
@@ -488,7 +483,7 @@
                     <!-- Last -->
                     <div class="flex flex-col justify-center items-start">
                         <h3 class="text-sm sm:text-lg mb-3 font-semibold">Follow us</h3>
-                        <div class="flex gap-10">
+                        <div class="flex gap-4">
                             <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook-f cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
                             <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
                             <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter cursor-pointer hover:scale-125 transition-transform duration-300 ease-in-out"></i></a>
@@ -497,7 +492,7 @@
                     </div>
                 </div>
             </div>    
-        </footer>
+        </section>
     </main>
 </body>
 </html>
